@@ -3,7 +3,13 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'echo "Passed!"; exit 0'
+                retry(3) {
+                    echo test retry
+                }
+
+                timeout(time: 3, unit: 'MINUTES') {
+                    date /t
+                }
             }
         }
     }
