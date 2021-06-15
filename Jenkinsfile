@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Deploy') {
+        stage('Deployement') {
             steps {
                 timeout(time: 7, unit: 'SECONDS') {
                     retry(5) {
