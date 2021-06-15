@@ -3,10 +3,10 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                timeout(time: 1, unit: 'SECONDS') {
+                timeout(time: 7, unit: 'SECONDS') {
                     retry(5) {
                         echo 'retry.....'
-						sleep 5
+			sleep 5
                     }
                 }
             }
