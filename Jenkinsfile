@@ -5,7 +5,7 @@ pipeline {
             steps {
                 timeout(time: 7, unit: 'SECONDS') {
                     retry(5) {
-                        echo 'retry...........'
+                        echo 'retry........'
 			sleep 5
                     }
                 }
