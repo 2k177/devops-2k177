@@ -1,0 +1,44 @@
+# string variables
+name: Danusha Shankar
+friut: "Mango"
+title: 'Engineer'
+
+bio: |
+  hello my name is Danusha
+  Just exploring in and out yaml
+
+# Write a single line in multiple lines
+message: >
+  This has to be a 
+  single line 
+
+# mention datatype explicitly
+message: !!str this will be a string data type
+
+number: 23
+marks: 98.1
+booleanvalue: !!bool No # n, N, false, False, FALSE
+# For True ->  Yes, Y, y
+
+#sapecify the type
+zero: !!int 0
+positiveNum: !!int 45
+negativeNum: !!int -35
+binaryNum: !!int 0b11001
+octalNum: !!int 06574
+hexa: !!int 0x45
+commaValue: !!int +540_000 # 540,000
+exponential numbers: 6.023E56
+
+# floating point numbers
+marks: !!float 56.89
+infinite: !!float .inf
+not a num: .nan
+
+surname: !!null Null # or null NULL ~
+~: this is a null key
+
+# dates and time
+date: !!timestamp 2002-12-14
+india time: 2001-12-15T02:59:43.10 +5:30
+no time zone: 2001-12-15T02:59:43.10
