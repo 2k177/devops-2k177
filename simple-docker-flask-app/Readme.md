@@ -20,5 +20,16 @@
     docker build -t <username>/<app name> .
     docker run -p 8888:5000 <username>/<app name>
     flask app will be running at http://localhost:5000/ 
- 
-        
+
+### Deploy app on AWS:
+1. Register an AWS account and login to your AWS console. 
+2. goto [https://console.aws.amazon.com/elasticbeanstalk]
+3. Create new application
+4. Provide app name
+5. In the New Environment screen, create a new environment and choose the Web Server Environment.
+6. Under base configuration section. Choose Docker from the predefined platform.
+7. Upload Dockerrun.aws.json(to provide EB about our container)  and click on upload.
+8. click on "Create environment", it takes few minutes for first time setup.
+9. Link for the application will appear once loaded.
+
+For detailed tutorial, I had followed https://docker-curriculum.com/ which was really beginner frinedly.
