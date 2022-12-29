@@ -1,7 +1,15 @@
-FROM nginx
+FROM python:3.8
 
-COPY wrapper.sh /
+# set work directory for app
+WORKDIR /usr/src/app
 
-COPY html /usr/share/nginx/html
+# copy all the files to container
+COPY . .
 
-CMD ["./wrapper.sh"]
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose application/container port number
+EXPOSE 5000
+
+# run the command for executing the flask app script
+CMD ["python", "./app.py"]
