@@ -1,0 +1,83 @@
+friends: !!seq
+  - John
+  - Kennedy
+  - Chadwick
+
+# similar to this
+friendss: [john, kennedy, chadwick]
+
+# How to represent the empty in a seq
+greetings:
+  - hello
+  -
+  - hi
+  - hola
+
+#nested sequence 
+-
+  - mango
+  - apple
+  - banana
+-
+  - marks
+  - roll no
+  - date
+
+# key:value pairs are called maps
+!!map
+
+#nested mappings : map within an map
+
+shows:
+  triller:
+    - Money heist
+    - Dahmer
+  sitcom:
+    - B99
+    - The office
+
+name: Danusha
+role:
+  age: 25
+  job: Engineer
+
+# pairs: keys may have duplicate values
+# !!pairs
+
+job role: !!pair
+  - job: student
+  - job: teacher
+
+#same as
+job role: !!pairs [job: student, job: teacher]
+
+# !!set will allow you to have unique values
+names: !!set
+  ? Anil
+  ? Kunal
+  ? jimmy
+
+# dictionary !!omap
+people: !!omap
+  - Rahul:
+      name: Rahul Apoorva
+      age: 66
+      height: 5.7
+  - Anoop:
+      name: Anoop Gowda
+      age: 44
+      height: 6
+
+# reusing some properties using anchors
+likings: &likes_flag
+  fav color: Blue
+  dislikes: green
+
+person1:
+  name: Chandan shetty
+  <<: *likes_flag
+person2: 
+  name: Nitin Desai
+  <<: *likes_flag
+  fav color: Yellow
+

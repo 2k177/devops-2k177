@@ -1,0 +1,14 @@
+{
+  "Company1": [
+    {
+        "name" : "ABC tech",
+        "MD": "Soandso",
+        "employee": [
+                {
+                    "empId": 134,
+                    "Name": "Sharath Reddy"
+                }
+        ]
+    }
+  ]
+}
